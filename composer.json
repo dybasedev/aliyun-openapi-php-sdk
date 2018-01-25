@@ -14,12 +14,50 @@
             "aliyun-php-sdk-core/Config.php"
         ],
         "classmap": [
-            "./"
+            "aliyun-php-sdk-alidns/",
+            "aliyun-php-sdk-arms/",
+            "aliyun-php-sdk-arms4finance/",
+            "aliyun-php-sdk-batchcompute/",
+            "aliyun-php-sdk-ccc/",
+            "aliyun-php-sdk-cdn/",
+            "aliyun-php-sdk-chatbot/",
+            "aliyun-php-sdk-cloudauth/",
+            "aliyun-php-sdk-cloudphoto/",
+            "aliyun-php-sdk-cms/",
+            "aliyun-php-sdk-core/",
+            "aliyun-php-sdk-cs/",
+            "aliyun-php-sdk-csb/",
+            "aliyun-php-sdk-dds/",
+            "aliyun-php-sdk-dm/",
+            "aliyun-php-sdk-domain/",
+            "aliyun-php-sdk-domain-intl/",
+            "aliyun-php-sdk-ecs/",
+            "aliyun-php-sdk-ess/",
+            "aliyun-php-sdk-green/",
+            "aliyun-php-sdk-iot/",
+            "aliyun-php-sdk-jaq/",
+            "aliyun-php-sdk-kms/",
+            "aliyun-php-sdk-live/",
+            "aliyun-php-sdk-market/",
+            "aliyun-php-sdk-mts/",
+            "aliyun-php-sdk-nas/",
+            "aliyun-php-sdk-ons/",
+            "aliyun-php-sdk-push/",
+            "aliyun-php-sdk-r-kvstore/",
+            "aliyun-php-sdk-ram/",
+            "aliyun-php-sdk-rds/",
+            "aliyun-php-sdk-sas-api/",
+            "aliyun-php-sdk-slb/",
+            "aliyun-php-sdk-sts/",
+            "aliyun-php-sdk-tesladam/",
+            "aliyun-php-sdk-teslamaxcompute/",
+            "aliyun-php-sdk-ubsms/",
+            "aliyun-php-sdk-vod/",
+            "aliyun-php-sdk-vpc/"
         ],
         "exclude-from-classmap": [
-            "vendor/",
-            "aliyun-php-sdk-core/Autoloader/",
-            "aliyun-php-sdk-release-test/"
+            "/vendor/",
+            "/aliyun-php-sdk-core/Autoloader/"
         ]
     }
 }
