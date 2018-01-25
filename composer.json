@@ -1,0 +1,25 @@
+{
+    "name": "dybasedev/aliyun-openapi-sdk",
+    "description": "基于阿里云官方 SDK 的完整 composer 打包",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "chongyi",
+            "email": "xpz3847878@163.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": [
+            "aliyun-php-sdk-core/Config.php"
+        ],
+        "classmap": [
+            "./"
+        ],
+        "exclude-from-classmap": [
+            "/vendor/",
+            "/aliyun-php-sdk-core/Autoloader/",
+            "/aliyun-php-sdk-release-test/"
+        ]
+    }
+}
