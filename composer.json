@@ -17,9 +17,9 @@
             "./"
         ],
         "exclude-from-classmap": [
-            "/vendor/",
-            "/aliyun-php-sdk-core/Autoloader/",
-            "/aliyun-php-sdk-release-test/"
+            "vendor/",
+            "aliyun-php-sdk-core/Autoloader/",
+            "aliyun-php-sdk-release-test/"
         ]
     }
 }
