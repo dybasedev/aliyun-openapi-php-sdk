@@ -45,6 +45,8 @@ class AllocateEipAddressRequest extends \RpcAcsRequest
 
 	private  $ownerId;
 
+	private  $resourceGroupId;
+
 	private  $internetChargeType;
 
 	private  $netmode;
@@ -132,6 +134,15 @@ class AllocateEipAddressRequest extends \RpcAcsRequest
 	public function setOwnerId($ownerId) {
 		$this->ownerId = $ownerId;
 		$this->queryParameters["OwnerId"]=$ownerId;
+	}
+
+	public function getResourceGroupId() {
+		return $this->resourceGroupId;
+	}
+
+	public function setResourceGroupId($resourceGroupId) {
+		$this->resourceGroupId = $resourceGroupId;
+		$this->queryParameters["ResourceGroupId"]=$resourceGroupId;
 	}
 
 	public function getInternetChargeType() {

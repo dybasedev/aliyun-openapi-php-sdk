@@ -1,3 +1,15 @@
+2018-03-23 Version: 4.6.7
+1, interface DescribeInstanceTypes output InstancePpsRx InstancePpsTx
+
+2018-03-23 Version: 4.6.7
+1, interface DescribeInstanceTypes output InstancePpsRx InstancePpsTx
+
+2018-03-23 Version: 4.6.6
+1, ModifyPrepayInstanceSpec support migrateAcrossZone.
+
+2018-03-16 Version: 4.6.5
+1, Synchronize to the latest api list
+
 2018-03-01 Version: 4.6.4
 1, DescribeInstanceTypes add eniQuantity vmBandwidthTx vmBandwidthRx attributes.
 

@@ -27,19 +27,56 @@ class SaveSingleTaskForCreatingOrderActivateRequest extends \RpcAcsRequest
 		$this->setMethod("POST");
 	}
 
+	private  $country;
+
 	private  $subscriptionDuration;
+
+	private  $address;
 
 	private  $permitPremiumActivation;
 
-	private  $userClientIp;
+	private  $telArea;
+
+	private  $city;
+
+	private  $dns2;
+
+	private  $dns1;
 
 	private  $domainName;
 
 	private  $registrantProfileId;
 
+	private  $telephone;
+
+	private  $aliyunDns;
+
+	private  $registrantOrganization;
+
+	private  $telExt;
+
+	private  $province;
+
+	private  $postalCode;
+
+	private  $userClientIp;
+
 	private  $enableDomainProxy;
 
 	private  $lang;
+
+	private  $email;
+
+	private  $registrantName;
+
+	public function getCountry() {
+		return $this->country;
+	}
+
+	public function setCountry($country) {
+		$this->country = $country;
+		$this->queryParameters["Country"]=$country;
+	}
 
 	public function getSubscriptionDuration() {
 		return $this->subscriptionDuration;
@@ -48,6 +85,15 @@ class SaveSingleTaskForCreatingOrderActivateRequest extends \RpcAcsRequest
 	public function setSubscriptionDuration($subscriptionDuration) {
 		$this->subscriptionDuration = $subscriptionDuration;
 		$this->queryParameters["SubscriptionDuration"]=$subscriptionDuration;
+	}
+
+	public function getAddress() {
+		return $this->address;
+	}
+
+	public function setAddress($address) {
+		$this->address = $address;
+		$this->queryParameters["Address"]=$address;
 	}
 
 	public function getPermitPremiumActivation() {
@@ -59,13 +105,40 @@ class SaveSingleTaskForCreatingOrderActivateRequest extends \RpcAcsRequest
 		$this->queryParameters["PermitPremiumActivation"]=$permitPremiumActivation;
 	}
 
-	public function getUserClientIp() {
-		return $this->userClientIp;
+	public function getTelArea() {
+		return $this->telArea;
 	}
 
-	public function setUserClientIp($userClientIp) {
-		$this->userClientIp = $userClientIp;
-		$this->queryParameters["UserClientIp"]=$userClientIp;
+	public function setTelArea($telArea) {
+		$this->telArea = $telArea;
+		$this->queryParameters["TelArea"]=$telArea;
+	}
+
+	public function getCity() {
+		return $this->city;
+	}
+
+	public function setCity($city) {
+		$this->city = $city;
+		$this->queryParameters["City"]=$city;
+	}
+
+	public function getDns2() {
+		return $this->dns2;
+	}
+
+	public function setDns2($dns2) {
+		$this->dns2 = $dns2;
+		$this->queryParameters["Dns2"]=$dns2;
+	}
+
+	public function getDns1() {
+		return $this->dns1;
+	}
+
+	public function setDns1($dns1) {
+		$this->dns1 = $dns1;
+		$this->queryParameters["Dns1"]=$dns1;
 	}
 
 	public function getDomainName() {
@@ -86,6 +159,69 @@ class SaveSingleTaskForCreatingOrderActivateRequest extends \RpcAcsRequest
 		$this->queryParameters["RegistrantProfileId"]=$registrantProfileId;
 	}
 
+	public function getTelephone() {
+		return $this->telephone;
+	}
+
+	public function setTelephone($telephone) {
+		$this->telephone = $telephone;
+		$this->queryParameters["Telephone"]=$telephone;
+	}
+
+	public function getAliyunDns() {
+		return $this->aliyunDns;
+	}
+
+	public function setAliyunDns($aliyunDns) {
+		$this->aliyunDns = $aliyunDns;
+		$this->queryParameters["AliyunDns"]=$aliyunDns;
+	}
+
+	public function getRegistrantOrganization() {
+		return $this->registrantOrganization;
+	}
+
+	public function setRegistrantOrganization($registrantOrganization) {
+		$this->registrantOrganization = $registrantOrganization;
+		$this->queryParameters["RegistrantOrganization"]=$registrantOrganization;
+	}
+
+	public function getTelExt() {
+		return $this->telExt;
+	}
+
+	public function setTelExt($telExt) {
+		$this->telExt = $telExt;
+		$this->queryParameters["TelExt"]=$telExt;
+	}
+
+	public function getProvince() {
+		return $this->province;
+	}
+
+	public function setProvince($province) {
+		$this->province = $province;
+		$this->queryParameters["Province"]=$province;
+	}
+
+	public function getPostalCode() {
+		return $this->postalCode;
+	}
+
+	public function setPostalCode($postalCode) {
+		$this->postalCode = $postalCode;
+		$this->queryParameters["PostalCode"]=$postalCode;
+	}
+
+	public function getUserClientIp() {
+		return $this->userClientIp;
+	}
+
+	public function setUserClientIp($userClientIp) {
+		$this->userClientIp = $userClientIp;
+		$this->queryParameters["UserClientIp"]=$userClientIp;
+	}
+
 	public function getEnableDomainProxy() {
 		return $this->enableDomainProxy;
 	}
@@ -102,6 +238,24 @@ class SaveSingleTaskForCreatingOrderActivateRequest extends \RpcAcsRequest
 	public function setLang($lang) {
 		$this->lang = $lang;
 		$this->queryParameters["Lang"]=$lang;
+	}
+
+	public function getEmail() {
+		return $this->email;
+	}
+
+	public function setEmail($email) {
+		$this->email = $email;
+		$this->queryParameters["Email"]=$email;
+	}
+
+	public function getRegistrantName() {
+		return $this->registrantName;
+	}
+
+	public function setRegistrantName($registrantName) {
+		$this->registrantName = $registrantName;
+		$this->queryParameters["RegistrantName"]=$registrantName;
 	}
 	
 }
