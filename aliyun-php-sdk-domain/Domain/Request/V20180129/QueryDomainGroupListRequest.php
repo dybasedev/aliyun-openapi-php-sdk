@@ -33,6 +33,8 @@ class QueryDomainGroupListRequest extends \RpcAcsRequest
 
 	private  $lang;
 
+	private  $showDeletingGroup;
+
 	public function getUserClientIp() {
 		return $this->userClientIp;
 	}
@@ -58,6 +60,15 @@ class QueryDomainGroupListRequest extends \RpcAcsRequest
 	public function setLang($lang) {
 		$this->lang = $lang;
 		$this->queryParameters["Lang"]=$lang;
+	}
+
+	public function getShowDeletingGroup() {
+		return $this->showDeletingGroup;
+	}
+
+	public function setShowDeletingGroup($showDeletingGroup) {
+		$this->showDeletingGroup = $showDeletingGroup;
+		$this->queryParameters["ShowDeletingGroup"]=$showDeletingGroup;
 	}
 	
 }

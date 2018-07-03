@@ -91,6 +91,8 @@ class CreateInstanceRequest extends \RpcAcsRequest
 
 	private  $vlanId;
 
+	private  $spotInterruptionBehavior;
+
 	private  $ioOptimized;
 
 	private  $securityGroupId;
@@ -102,6 +104,8 @@ class CreateInstanceRequest extends \RpcAcsRequest
 	private  $systemDiskCategory;
 
 	private  $userData;
+
+	private  $passwordInherit;
 
 	private  $instanceType;
 
@@ -120,6 +124,8 @@ class CreateInstanceRequest extends \RpcAcsRequest
 	private  $systemDiskDiskName;
 
 	private  $ramRoleName;
+
+	private  $dedicatedHostId;
 
 	private  $clusterId;
 
@@ -423,6 +429,15 @@ class CreateInstanceRequest extends \RpcAcsRequest
 		$this->queryParameters["VlanId"]=$vlanId;
 	}
 
+	public function getSpotInterruptionBehavior() {
+		return $this->spotInterruptionBehavior;
+	}
+
+	public function setSpotInterruptionBehavior($spotInterruptionBehavior) {
+		$this->spotInterruptionBehavior = $spotInterruptionBehavior;
+		$this->queryParameters["SpotInterruptionBehavior"]=$spotInterruptionBehavior;
+	}
+
 	public function getIoOptimized() {
 		return $this->ioOptimized;
 	}
@@ -475,6 +490,15 @@ class CreateInstanceRequest extends \RpcAcsRequest
 	public function setUserData($userData) {
 		$this->userData = $userData;
 		$this->queryParameters["UserData"]=$userData;
+	}
+
+	public function getPasswordInherit() {
+		return $this->passwordInherit;
+	}
+
+	public function setPasswordInherit($passwordInherit) {
+		$this->passwordInherit = $passwordInherit;
+		$this->queryParameters["PasswordInherit"]=$passwordInherit;
 	}
 
 	public function getInstanceType() {
@@ -556,6 +580,15 @@ class CreateInstanceRequest extends \RpcAcsRequest
 	public function setRamRoleName($ramRoleName) {
 		$this->ramRoleName = $ramRoleName;
 		$this->queryParameters["RamRoleName"]=$ramRoleName;
+	}
+
+	public function getDedicatedHostId() {
+		return $this->dedicatedHostId;
+	}
+
+	public function setDedicatedHostId($dedicatedHostId) {
+		$this->dedicatedHostId = $dedicatedHostId;
+		$this->queryParameters["DedicatedHostId"]=$dedicatedHostId;
 	}
 
 	public function getClusterId() {

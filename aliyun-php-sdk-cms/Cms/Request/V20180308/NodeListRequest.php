@@ -24,11 +24,14 @@ class NodeListRequest extends \RpcAcsRequest
 	function  __construct()
 	{
 		parent::__construct("Cms", "2018-03-08", "NodeList", "cms", "openAPI");
+		$this->setMethod("POST");
 	}
 
 	private  $hostName;
 
 	private  $instanceIds;
+
+	private  $instanceRegionId;
 
 	private  $pageSize;
 
@@ -58,6 +61,15 @@ class NodeListRequest extends \RpcAcsRequest
 	public function setInstanceIds($instanceIds) {
 		$this->instanceIds = $instanceIds;
 		$this->queryParameters["InstanceIds"]=$instanceIds;
+	}
+
+	public function getInstanceRegionId() {
+		return $this->instanceRegionId;
+	}
+
+	public function setInstanceRegionId($instanceRegionId) {
+		$this->instanceRegionId = $instanceRegionId;
+		$this->queryParameters["InstanceRegionId"]=$instanceRegionId;
 	}
 
 	public function getPageSize() {

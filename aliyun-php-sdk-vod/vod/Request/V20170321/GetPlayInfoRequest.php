@@ -43,9 +43,13 @@ class GetPlayInfoRequest extends \RpcAcsRequest
 
 	private  $ownerId;
 
+	private  $resultType;
+
 	private  $rand;
 
 	private  $reAuthInfo;
+
+	private  $outputType;
 
 	private  $definition;
 
@@ -125,6 +129,15 @@ class GetPlayInfoRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
+	public function getResultType() {
+		return $this->resultType;
+	}
+
+	public function setResultType($resultType) {
+		$this->resultType = $resultType;
+		$this->queryParameters["ResultType"]=$resultType;
+	}
+
 	public function getRand() {
 		return $this->rand;
 	}
@@ -141,6 +154,15 @@ class GetPlayInfoRequest extends \RpcAcsRequest
 	public function setReAuthInfo($reAuthInfo) {
 		$this->reAuthInfo = $reAuthInfo;
 		$this->queryParameters["ReAuthInfo"]=$reAuthInfo;
+	}
+
+	public function getOutputType() {
+		return $this->outputType;
+	}
+
+	public function setOutputType($outputType) {
+		$this->outputType = $outputType;
+		$this->queryParameters["OutputType"]=$outputType;
 	}
 
 	public function getDefinition() {

@@ -27,7 +27,11 @@ class RunInstancesRequest extends \RpcAcsRequest
 		$this->setMethod("POST");
 	}
 
+	private  $launchTemplateName;
+
 	private  $resourceOwnerId;
+
+	private  $hpcClusterId;
 
 	private  $securityEnhancementStrategy;
 
@@ -35,13 +39,21 @@ class RunInstancesRequest extends \RpcAcsRequest
 
 	private  $spotPriceLimit;
 
+	private  $resourceGroupId;
+
 	private  $hostName;
 
 	private  $password;
 
 	private  $Tags;
 
+	private  $autoRenewPeriod;
+
+	private  $period;
+
 	private  $dryRun;
+
+	private  $launchTemplateId;
 
 	private  $ownerId;
 
@@ -49,7 +61,11 @@ class RunInstancesRequest extends \RpcAcsRequest
 
 	private  $spotStrategy;
 
+	private  $periodUnit;
+
 	private  $instanceName;
+
+	private  $autoRenew;
 
 	private  $internetChargeType;
 
@@ -58,6 +74,8 @@ class RunInstancesRequest extends \RpcAcsRequest
 	private  $internetMaxBandwidthIn;
 
 	private  $imageId;
+
+	private  $spotInterruptionBehavior;
 
 	private  $clientToken;
 
@@ -73,7 +91,11 @@ class RunInstancesRequest extends \RpcAcsRequest
 
 	private  $userData;
 
+	private  $passwordInherit;
+
 	private  $instanceType;
+
+	private  $instanceChargeType;
 
 	private  $NetworkInterfaces;
 
@@ -89,11 +111,24 @@ class RunInstancesRequest extends \RpcAcsRequest
 
 	private  $autoReleaseTime;
 
+	private  $dedicatedHostId;
+
 	private  $DataDisks;
+
+	private  $launchTemplateVersion;
 
 	private  $systemDiskSize;
 
 	private  $systemDiskDescription;
+
+	public function getLaunchTemplateName() {
+		return $this->launchTemplateName;
+	}
+
+	public function setLaunchTemplateName($launchTemplateName) {
+		$this->launchTemplateName = $launchTemplateName;
+		$this->queryParameters["LaunchTemplateName"]=$launchTemplateName;
+	}
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -102,6 +137,15 @@ class RunInstancesRequest extends \RpcAcsRequest
 	public function setResourceOwnerId($resourceOwnerId) {
 		$this->resourceOwnerId = $resourceOwnerId;
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+	}
+
+	public function getHpcClusterId() {
+		return $this->hpcClusterId;
+	}
+
+	public function setHpcClusterId($hpcClusterId) {
+		$this->hpcClusterId = $hpcClusterId;
+		$this->queryParameters["HpcClusterId"]=$hpcClusterId;
 	}
 
 	public function getSecurityEnhancementStrategy() {
@@ -129,6 +173,15 @@ class RunInstancesRequest extends \RpcAcsRequest
 	public function setSpotPriceLimit($spotPriceLimit) {
 		$this->spotPriceLimit = $spotPriceLimit;
 		$this->queryParameters["SpotPriceLimit"]=$spotPriceLimit;
+	}
+
+	public function getResourceGroupId() {
+		return $this->resourceGroupId;
+	}
+
+	public function setResourceGroupId($resourceGroupId) {
+		$this->resourceGroupId = $resourceGroupId;
+		$this->queryParameters["ResourceGroupId"]=$resourceGroupId;
 	}
 
 	public function getHostName() {
@@ -162,6 +215,24 @@ class RunInstancesRequest extends \RpcAcsRequest
 		}
 	}
 
+	public function getAutoRenewPeriod() {
+		return $this->autoRenewPeriod;
+	}
+
+	public function setAutoRenewPeriod($autoRenewPeriod) {
+		$this->autoRenewPeriod = $autoRenewPeriod;
+		$this->queryParameters["AutoRenewPeriod"]=$autoRenewPeriod;
+	}
+
+	public function getPeriod() {
+		return $this->period;
+	}
+
+	public function setPeriod($period) {
+		$this->period = $period;
+		$this->queryParameters["Period"]=$period;
+	}
+
 	public function getDryRun() {
 		return $this->dryRun;
 	}
@@ -169,6 +240,15 @@ class RunInstancesRequest extends \RpcAcsRequest
 	public function setDryRun($dryRun) {
 		$this->dryRun = $dryRun;
 		$this->queryParameters["DryRun"]=$dryRun;
+	}
+
+	public function getLaunchTemplateId() {
+		return $this->launchTemplateId;
+	}
+
+	public function setLaunchTemplateId($launchTemplateId) {
+		$this->launchTemplateId = $launchTemplateId;
+		$this->queryParameters["LaunchTemplateId"]=$launchTemplateId;
 	}
 
 	public function getOwnerId() {
@@ -198,6 +278,15 @@ class RunInstancesRequest extends \RpcAcsRequest
 		$this->queryParameters["SpotStrategy"]=$spotStrategy;
 	}
 
+	public function getPeriodUnit() {
+		return $this->periodUnit;
+	}
+
+	public function setPeriodUnit($periodUnit) {
+		$this->periodUnit = $periodUnit;
+		$this->queryParameters["PeriodUnit"]=$periodUnit;
+	}
+
 	public function getInstanceName() {
 		return $this->instanceName;
 	}
@@ -205,6 +294,15 @@ class RunInstancesRequest extends \RpcAcsRequest
 	public function setInstanceName($instanceName) {
 		$this->instanceName = $instanceName;
 		$this->queryParameters["InstanceName"]=$instanceName;
+	}
+
+	public function getAutoRenew() {
+		return $this->autoRenew;
+	}
+
+	public function setAutoRenew($autoRenew) {
+		$this->autoRenew = $autoRenew;
+		$this->queryParameters["AutoRenew"]=$autoRenew;
 	}
 
 	public function getInternetChargeType() {
@@ -241,6 +339,15 @@ class RunInstancesRequest extends \RpcAcsRequest
 	public function setImageId($imageId) {
 		$this->imageId = $imageId;
 		$this->queryParameters["ImageId"]=$imageId;
+	}
+
+	public function getSpotInterruptionBehavior() {
+		return $this->spotInterruptionBehavior;
+	}
+
+	public function setSpotInterruptionBehavior($spotInterruptionBehavior) {
+		$this->spotInterruptionBehavior = $spotInterruptionBehavior;
+		$this->queryParameters["SpotInterruptionBehavior"]=$spotInterruptionBehavior;
 	}
 
 	public function getClientToken() {
@@ -306,6 +413,15 @@ class RunInstancesRequest extends \RpcAcsRequest
 		$this->queryParameters["UserData"]=$userData;
 	}
 
+	public function getPasswordInherit() {
+		return $this->passwordInherit;
+	}
+
+	public function setPasswordInherit($passwordInherit) {
+		$this->passwordInherit = $passwordInherit;
+		$this->queryParameters["PasswordInherit"]=$passwordInherit;
+	}
+
 	public function getInstanceType() {
 		return $this->instanceType;
 	}
@@ -313,6 +429,15 @@ class RunInstancesRequest extends \RpcAcsRequest
 	public function setInstanceType($instanceType) {
 		$this->instanceType = $instanceType;
 		$this->queryParameters["InstanceType"]=$instanceType;
+	}
+
+	public function getInstanceChargeType() {
+		return $this->instanceChargeType;
+	}
+
+	public function setInstanceChargeType($instanceChargeType) {
+		$this->instanceChargeType = $instanceChargeType;
+		$this->queryParameters["InstanceChargeType"]=$instanceChargeType;
 	}
 
 	public function getNetworkInterfaces() {
@@ -385,6 +510,15 @@ class RunInstancesRequest extends \RpcAcsRequest
 		$this->queryParameters["AutoReleaseTime"]=$autoReleaseTime;
 	}
 
+	public function getDedicatedHostId() {
+		return $this->dedicatedHostId;
+	}
+
+	public function setDedicatedHostId($dedicatedHostId) {
+		$this->dedicatedHostId = $dedicatedHostId;
+		$this->queryParameters["DedicatedHostId"]=$dedicatedHostId;
+	}
+
 	public function getDataDisks() {
 		return $this->DataDisks;
 	}
@@ -398,9 +532,19 @@ class RunInstancesRequest extends \RpcAcsRequest
 			$this->queryParameters['DataDisk.' . ($i + 1) . '.Encrypted'] = $DataDisks[$i]['Encrypted'];
 			$this->queryParameters['DataDisk.' . ($i + 1) . '.DiskName'] = $DataDisks[$i]['DiskName'];
 			$this->queryParameters['DataDisk.' . ($i + 1) . '.Description'] = $DataDisks[$i]['Description'];
+			$this->queryParameters['DataDisk.' . ($i + 1) . '.Device'] = $DataDisks[$i]['Device'];
 			$this->queryParameters['DataDisk.' . ($i + 1) . '.DeleteWithInstance'] = $DataDisks[$i]['DeleteWithInstance'];
 
 		}
+	}
+
+	public function getLaunchTemplateVersion() {
+		return $this->launchTemplateVersion;
+	}
+
+	public function setLaunchTemplateVersion($launchTemplateVersion) {
+		$this->launchTemplateVersion = $launchTemplateVersion;
+		$this->queryParameters["LaunchTemplateVersion"]=$launchTemplateVersion;
 	}
 
 	public function getSystemDiskSize() {
