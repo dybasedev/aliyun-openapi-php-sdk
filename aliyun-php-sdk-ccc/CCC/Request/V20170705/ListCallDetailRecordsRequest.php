@@ -23,7 +23,7 @@ class ListCallDetailRecordsRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("CCC", "2017-07-05", "ListCallDetailRecords", "CCC", "openAPI");
+		parent::__construct("CCC", "2017-07-05", "ListCallDetailRecords", "ccc", "openAPI");
 		$this->setMethod("POST");
 	}
 
@@ -39,9 +39,11 @@ class ListCallDetailRecordsRequest extends \RpcAcsRequest
 
 	private  $pageSize;
 
-	private  $startTime;
+	private  $orderBy;
 
 	private  $stopTime;
+
+	private  $startTime;
 
 	private  $pageNumber;
 
@@ -101,13 +103,13 @@ class ListCallDetailRecordsRequest extends \RpcAcsRequest
 		$this->queryParameters["PageSize"]=$pageSize;
 	}
 
-	public function getStartTime() {
-		return $this->startTime;
+	public function getOrderBy() {
+		return $this->orderBy;
 	}
 
-	public function setStartTime($startTime) {
-		$this->startTime = $startTime;
-		$this->queryParameters["StartTime"]=$startTime;
+	public function setOrderBy($orderBy) {
+		$this->orderBy = $orderBy;
+		$this->queryParameters["OrderBy"]=$orderBy;
 	}
 
 	public function getStopTime() {
@@ -117,6 +119,15 @@ class ListCallDetailRecordsRequest extends \RpcAcsRequest
 	public function setStopTime($stopTime) {
 		$this->stopTime = $stopTime;
 		$this->queryParameters["StopTime"]=$stopTime;
+	}
+
+	public function getStartTime() {
+		return $this->startTime;
+	}
+
+	public function setStartTime($startTime) {
+		$this->startTime = $startTime;
+		$this->queryParameters["StartTime"]=$startTime;
 	}
 
 	public function getPageNumber() {

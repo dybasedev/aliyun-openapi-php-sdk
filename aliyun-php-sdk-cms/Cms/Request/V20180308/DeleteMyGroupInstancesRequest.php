@@ -29,6 +29,8 @@ class DeleteMyGroupInstancesRequest extends \RpcAcsRequest
 
 	private  $instanceIds;
 
+	private  $instanceIdList;
+
 	private  $groupId;
 
 	public function getInstanceIds() {
@@ -38,6 +40,15 @@ class DeleteMyGroupInstancesRequest extends \RpcAcsRequest
 	public function setInstanceIds($instanceIds) {
 		$this->instanceIds = $instanceIds;
 		$this->queryParameters["InstanceIds"]=$instanceIds;
+	}
+
+	public function getInstanceIdList() {
+		return $this->instanceIdList;
+	}
+
+	public function setInstanceIdList($instanceIdList) {
+		$this->instanceIdList = $instanceIdList;
+		$this->queryParameters["InstanceIdList"]=$instanceIdList;
 	}
 
 	public function getGroupId() {
