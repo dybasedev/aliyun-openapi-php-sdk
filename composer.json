@@ -1,6 +1,7 @@
 {
     "name": "dybasedev/aliyun-openapi-sdk",
     "description": "基于阿里云官方 SDK 的完整 composer 打包",
+    "keywords": ["aliyun", "sdk", "composer", "package", "aliyun-sdk"],
     "license": "MIT",
     "authors": [
         {
