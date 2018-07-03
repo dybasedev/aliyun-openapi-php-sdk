@@ -11,7 +11,7 @@
 ## Example
 
 ```php
-include_once '../aliyun-php-sdk-core/Config.php';
+include_once 'vender/autoload.php';
 use Ecs\Request\V20140526 as Ecs;
 
 $iClientProfile = DefaultProfile::getProfile("cn-hangzhou", "<your accessKey>", "<your accessSecret>");
